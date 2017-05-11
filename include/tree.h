@@ -45,7 +45,7 @@ Tree<T>::Tree()
 template<class T>
 Tree<T>::~Tree()
 {
-	deleteT(root);
+	deletetree(root);
 	count=0;
 }
 
