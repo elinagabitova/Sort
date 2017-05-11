@@ -1,5 +1,4 @@
 #include <tree.h>
-
 #include <catch.hpp>
 
 
@@ -22,7 +21,7 @@ SCENARIO("insert", "[init]")
 
   Tree<int> test;
 
-  test.insert_node(5);
+  test.insnode(5);
 
   REQUIRE(test.get_count() == 1);
 
@@ -36,7 +35,7 @@ SCENARIO("find_node", "[init]")
 
   Tree<int> test;
 
-  test.insert_node(4);
+  test.insnode(4);
 
   REQUIRE(test.find_node(4, test.root_()) != nullptr);
 
@@ -50,7 +49,7 @@ SCENARIO("get root", "[init]")
 
   Tree<int> test;
 
-  test.insert_node(4);
+  test.insnode(4);
 
   REQUIRE(test.root_() != 0);
 
@@ -62,9 +61,9 @@ SCENARIO("insert equal elements", "[insert]")
 
    Tree<int> test;
 
-   test.insert_node(4);
+   test.insnode(4);
 
-   test.insert_node(4);
+   test.insnode(4);
 
    REQUIRE(test.get_count() == 1);
 
@@ -76,15 +75,15 @@ SCENARIO ("reading/writing", "[init]")
 
   Tree<int> test1;
 
-  test1.insert_node(4);
+  test1.insnode(4);
 
-  test1.insert_node(3);
+  test1.insnode(3);
 
-  test1.writing("file2.txt");
+  test1.write("file2.txt");
 
   Tree<int> test2;
 
-  test2.reading("file2.txt");
+  test2.read("file2.txt");
 
   REQUIRE(test2.find_node(4, test2.root_())!= nullptr);
 
@@ -100,11 +99,11 @@ SCENARIO("deleteX")
 
   Tree<int> test;
 
-  test.insert_node(6);
+  test.insnode(6);
 
-  test.insert_node(7);
+  test.insnode(7);
 
-  test.insert_node(9);
+  test.insnode(9);
 
   test.deleteVal(6);
 
