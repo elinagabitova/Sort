@@ -1,2 +1,2 @@
 # tree
-https://travis-ci.org/elinagabitova/tree.svg?branch=master
+[![Build Status] https://travis-ci.org/elinagabitova/tree.svg?branch=master]
