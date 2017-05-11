@@ -10,7 +10,7 @@ template <class T> struct Node
 
 template <class T> class Tree
 {
-tprivate:
+private:
 	Node<T>*root;
 	int count;
 
