@@ -91,26 +91,23 @@ void Tree<T>::insnode(const T&x)
 
 	while (temp)
 	{
-		pn = temp;
-
+	pn = temp;
+		
 		if (x < temp->key)
-
 			temp = temp->Left;
 		else
 			temp = temp->Right;
-
 	}
 
 	if (!pn)
 		root = dn;
 	else
-
 	{
 		if (x < pn->key)
 			pn->Left = dn;
 
 		else
-			pn->Right = dn;
+		pn->Right = dn;
 	}
 	count++;
 }
@@ -231,25 +228,22 @@ bool Tree<T>::deleteValue(Node<T>* parent, Node<T>* current,const T& val)
 
 			Node<T>* temp = current->Left;
 			if (current->Right) temp = current->Right;
-			if (parent) {
-
-				if (parent->Left == current) {
+			if (parent) 
+			{
+				if (parent->Left == current) 
+				{
 					parent->Left = temp;
-
 				}
-
-				else {
+				else 
+				{
 					parent->Right = temp;
-
 				}
-
 			}
-
-			else {
+			else 
+			{
 				this->root = temp;
-
 			}
-
+\
 		}
 
 		else {
