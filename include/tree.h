@@ -68,7 +68,7 @@ void Tree<T>::deletetree(Node<T>* temp)
 
 template<class T>
 Node<T>*Tree<T>::root_()const
-
+{
 	return root;
 }
 
