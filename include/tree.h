@@ -17,8 +17,7 @@ private:
 public:
 	Tree();
 	~Tree();
-	void deletetree(Node<T>* temp);
-	void insnode(const T&);
+	void deletetree(Node<T>* temp);	void insnode(const T&);
 	int get_count()const;
 	void print()const;	
 	Node<T>* find_node(const T& val, Node<T>* temp)const;
@@ -31,8 +30,6 @@ public:
 	bool deleteValue(Node<T>* parent, Node<T>* current, const T& val);
 	bool deleteVal(const T& value);
 };
-
-
 
 template<class T>
 Tree<T>::Tree()
@@ -53,10 +50,9 @@ template<class T>
 void Tree<T>::deletetree(Node<T>* temp)
 {
 	if (!temp)
-
-		return;
+	return;
+	
 	if (temp->Left)
-
 	{
 		deletetree(temp->Left);
 		temp->Left = nullptr;
@@ -72,7 +68,7 @@ void Tree<T>::deletetree(Node<T>* temp)
 
 template<class T>
 Node<T>*Tree<T>::root_()const
-{
+
 	return root;
 }
 
@@ -94,7 +90,6 @@ void Tree<T>::insnode(const T&x)
 	Node<T>* temp = root;
 
 	while (temp)
-
 	{
 		pn = temp;
 
