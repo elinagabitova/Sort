@@ -3,7 +3,7 @@
 
 template <class T> struct Node
 {
-	T key;
+	T key; //ключ,данные
 	Node<T>* Left;
 	Node<T>* Right;
 };
