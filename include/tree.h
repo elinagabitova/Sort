@@ -173,20 +173,15 @@ void Tree<T>::output(std::ostream& ost, Node<T>* temp)const
 
 
 template<typename T>
-void Tree<T>::write(const std::string& filename)const
+void Tree<T>::write(const std::ofstream fout(filename))const
 {
-	std::ofstream fout(filename);
-	try
-	{
+	
+	
 		if (!fout.is_open())
-			throw 12;
+			throw std::runtime_error();
 		fout << count << " ";
 		output(fout, root);
 		fout.close();
-	}
-	catch (int i)
-	{
-		std::cout << "The file isn't found" << std::endl;
 	}
 }
 
