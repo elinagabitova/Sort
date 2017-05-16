@@ -1,8 +1,6 @@
 #include <tree.h>
 #include <catch.hpp>
 
-
-
 SCENARIO ("init", "[init]")
 
 {
@@ -69,7 +67,7 @@ SCENARIO("insert equal elements", "[insert]")
 
  }
 
-SCENARIO ("reading/writing", "[init]")
+SCENARIO ("read/write", "[init]")
 
 {
 
