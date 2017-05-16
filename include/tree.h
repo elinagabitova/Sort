@@ -80,7 +80,6 @@ int Tree<T>::get_count()const
 
 template<class T>
 void Tree<T>::insnode(const T&x)
-
 {
 	if (find_node(x, root) != nullptr) return;
 	Node<T>* dn = new Node<T>;
@@ -154,12 +153,10 @@ void Tree<T>::read(const std::string& filename)
 	{
 		std::cout << "The file isn't found" << std::endl;
 	}
-
 }
 
 template<typename T>
 void Tree<T>::print() const
-
 {
 	output(std::cout, this->root);
 }
@@ -190,7 +187,8 @@ void Tree<T>::write(const std::string& filename)const
 	catch (int i)
 	{
 		std::cout << "The file isn't found" << std::endl;
-	}}
+	}
+}
 
 template<typename T>
 void Tree<T>::display(Node<T>* temp, unsigned int level)const
@@ -217,15 +215,13 @@ void Tree<T>::out()const
 
 template<class T>
 bool Tree<T>::deleteValue(Node<T>* parent, Node<T>* current,const T& val)
-
 {
-
 	if (!current) return false;
+	
 	if (current->key == val)
-
 	{
-		if (current->Left == NULL || current->Right == NULL) {
-
+		if (current->Left == NULL || current->Right == NULL) 
+		{
 			Node<T>* temp = current->Left;
 			if (current->Right) temp = current->Right;
 			if (parent) 
@@ -243,17 +239,15 @@ bool Tree<T>::deleteValue(Node<T>* parent, Node<T>* current,const T& val)
 			{
 				this->root = temp;
 			}
-\
 		}
 
-		else {
-
+		else 
+		{
 			Node<T>* validSubs = current->Right;
-			while (validSubs->Left) {
+			while (validSubs->Left) 
+			{
 				validSubs = validSubs->Left;
-
 			}
-
 			T temp = current->key;
 			current->key = validSubs->key;
 			validSubs->key = temp;
