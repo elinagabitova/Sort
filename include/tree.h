@@ -26,7 +26,7 @@ public:
 	void out()const;
 	void read(const std::string& filename);
 	void output(std::ostream& ost, Node<T>* temp)const;
-	void write(std::ofstream fout(filename))const;
+	void write(std::ofstream &fout)const;
 	bool deleteValue(Node<T>* parent, Node<T>* current, const T& val);
 	bool deleteVal(const T& value);
 };
