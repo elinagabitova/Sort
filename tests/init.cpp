@@ -78,6 +78,18 @@ SCENARIO ("read/write", "[init]")
   test1.insnode(3);
 
   test1.write("file2.txt");
+  bool isCatched = false;
+  
+  try
+    {
+    tree.write("~,  , *");
+    
+    catch(isCatched)
+     {
+      isCatched = true;
+    }
+    REQUIRE(isCatched == false);
+    
 
   Tree<int> test2;
 
