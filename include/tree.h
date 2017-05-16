@@ -176,7 +176,7 @@ template<typename T>
 void Tree<T>::write(std::ofstream &fout)const
 { 
 		if (!fout.is_open())
-			throw std::runtime_error;
+			throw runtime_error;
 		fout << count << " ";
 		output(fout, root);
 		fout.close();
