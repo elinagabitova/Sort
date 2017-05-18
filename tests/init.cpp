@@ -73,7 +73,7 @@ SCENARIO ("read/write", "[init]")
 {
 
   Tree<int> test1;
-    std::ofstream& file1 = std::fstream::open("file2.txt", std::fstream::out);
+ test1.read("file1.txt");
       bool isCatched = false;
   try
     {
