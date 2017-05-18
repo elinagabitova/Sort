@@ -85,6 +85,7 @@ SCENARIO ("read/write", "[init]")
     catch(bool isCatched)
     {
       isCatched = true;
+      throw logic_error ("Something do bad.");
     }
    
   REQUIRE(isCatched == false); 
@@ -95,7 +96,7 @@ SCENARIO ("read/write", "[init]")
 
   REQUIRE(test2.find_node(3, test2.root_())!= nullptr);
 
-  REQUIRE(test2.find_node(3, test2.root_())!= nullptr);
+  REQUIRE(test2.find_node(4, test2.root_())!= nullptr);
 
   REQUIRE(test1.get_count() == test2.get_count());
 
