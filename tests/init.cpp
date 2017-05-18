@@ -93,7 +93,7 @@ SCENARIO ("read/write", "[init]")
 
   test2.read("file2.txt");
 
-  REQUIRE(test2.find_node(4, test2.root_())!= nullptr);
+  REQUIRE(test2.find_node(3, test2.root_())!= nullptr);
 
   REQUIRE(test2.find_node(3, test2.root_())!= nullptr);
 
