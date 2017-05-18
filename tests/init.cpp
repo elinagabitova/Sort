@@ -78,7 +78,7 @@ SCENARIO ("read/write", "[init]")
   try
     {
   
-  test1.write(file1);
+  test1.write("file1.txt");
 
     }// test1.write("~,  , *"); //
     
