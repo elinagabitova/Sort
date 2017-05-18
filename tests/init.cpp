@@ -1,5 +1,6 @@
 #include <tree.h>
 #include <catch.hpp>
+#include <fstream.h>
 
 SCENARIO ("init", "[init]")
 
@@ -71,21 +72,20 @@ SCENARIO ("read/write", "[init]")
 
 {
 
-  Tree<int> test1;
-
-  test1.write("file2.txt");
-  bool isCatched = false;
-  
+  Tree<int> test1;  
   try
     {
-    test1.write("~,  , *");
+  ofstream& file1 = open("file2.txt", out);
+  test1.write(file1);
+  bool isCatched = false;
+   // test1.write("~,  , *"); //
     
     catch(isCatched)
      {
       isCatched = true;
     }
-    REQUIRE(isCatched == false);
-    
+   
+  REQUIRE(isCatched == false); 
 
   Tree<int> test2;
 
