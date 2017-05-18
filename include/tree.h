@@ -27,7 +27,7 @@ public:
 	void out()const;
 	void read(const std::string& filename);
 	void output(std::ostream& ost, Node<T>* temp)const;
-	void Tree<T>::write(const std::string& filename)const;
+	void write(const std::string& filename)const;
 	bool deleteValue(Node<T>* parent, Node<T>* current, const T& val);
 	bool deleteVal(const T& value);
 };
