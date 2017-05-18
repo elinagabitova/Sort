@@ -73,11 +73,12 @@ SCENARIO ("read/write", "[init]")
 {
 
   Tree<int> test1;
-    std::ofstream& file1 = open("file2.txt", out);
+    std::ofstream& file1 = std::open("file2.txt", std::out);
+    bool isCatched = false;
   try
     {
   test1.write(file1);
-  bool isCatched = false;
+
     }// test1.write("~,  , *"); //
     
     catch(isCatched)
