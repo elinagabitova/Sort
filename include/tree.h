@@ -174,10 +174,8 @@ void Tree<T>::output(std::ostream& ost, Node<T>* temp)const
 
 
 template<typename T>
-void Tree<T>::write(const string filename)const
+void Tree<T>::write(std::ofstream& fout)const
 { 
-		ofstream fout;
-		fout.open(filename);
 		if (!fout.is_open())
 		{
 			throw std::runtime_error(" it doesn't working ");
