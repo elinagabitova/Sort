@@ -85,7 +85,7 @@ SCENARIO ("read/write", "[init]")
     catch(bool isCatched)
     {
       isCatched = true;
-      throw logic_error ("Something do bad.");
+      throw std::logic_error ("Something do bad.");
     }
    
   REQUIRE(isCatched == false); 
