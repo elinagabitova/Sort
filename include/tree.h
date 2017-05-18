@@ -174,11 +174,13 @@ void Tree<T>::output(std::ostream& ost, Node<T>* temp)const
 
 
 template<typename T>
-void Tree<T>::write(std::ofstream& fout)const
+void Tree<T>::write(const string filename)const
 { 
+		ofstream fout;
+		fout.open(filename);
 		if (!fout.is_open())
 		{
-			throw std::runtime_error(" woooooooooork please ");
+			throw std::runtime_error(" it doesn't working ");
 		}
 		fout << count << " ";
 		output(fout, root);
