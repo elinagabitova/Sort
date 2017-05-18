@@ -81,7 +81,7 @@ SCENARIO ("read/write", "[init]")
 
     }// test1.write("~,  , *"); //
     
-    catch(isCatched)
+    catch(bool isCatched)
     {
       isCatched = true;
     }
