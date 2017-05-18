@@ -73,7 +73,7 @@ SCENARIO ("read/write", "[init]")
 {
 
   Tree<int> test1;
-    ofstream& file1 = open("file2.txt", out);
+    std::ofstream& file1 = open("file2.txt", out);
   try
     {
   test1.write(file1);
