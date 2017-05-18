@@ -1,6 +1,6 @@
 #include <tree.h>
 #include <catch.hpp>
-#include <fstream.h>
+#include <fstream>
 
 SCENARIO ("init", "[init]")
 
