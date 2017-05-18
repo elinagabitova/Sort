@@ -72,16 +72,16 @@ SCENARIO ("read/write", "[init]")
 
 {
 
-  Tree<int> test1;  
+  Tree<int> test1;
+    ofstream& file1 = open("file2.txt", out);
   try
     {
-  ofstream& file1 = open("file2.txt", out);
   test1.write(file1);
   bool isCatched = false;
-   // test1.write("~,  , *"); //
+    }// test1.write("~,  , *"); //
     
     catch(isCatched)
-     {
+    {
       isCatched = true;
     }
    
