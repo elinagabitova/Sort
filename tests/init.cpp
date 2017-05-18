@@ -72,15 +72,14 @@ SCENARIO ("read/write", "[init]")
 
 {
 
-  Tree<int> test1;
- test1.read("file1.txt");
-      bool isCatched = false;
+    Tree<int> test1;
+    test1.read("file1.txt");
+    bool isCatched = false;
+  
   try
     {
-  
-  test1.write("file.txt");
-
-    }// test1.write("~,  , *"); //
+      test1.write("file.txt");
+    }
     
     catch(bool isCatched)
     {
@@ -93,8 +92,6 @@ SCENARIO ("read/write", "[init]")
   Tree<int> test2;
 
   test2.read("file2.txt");
-
-  REQUIRE(test2.find_node(3, test2.root_())!= nullptr);
 
   REQUIRE(test2.find_node(4, test2.root_())!= nullptr);
 
